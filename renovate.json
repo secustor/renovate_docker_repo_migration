@@ -3,7 +3,8 @@
    "extends":[
       "config:base"
    ],
-   "regexManagers":{
+   "regexManagers": [
+   {
       "fileMatch":[
          "(^|/)values.yaml$",
          "/values_base.ya?ml$"
@@ -13,5 +14,5 @@
       ],
       "depNameTemplate":"{{#if shouldMigrate}}docker.io/nginxinc/nginx-unprivileged{{else}}{{{depName}}}{{/if}}",
       "datasourceTemplate":"docker"
-   }
+   }]
 }
