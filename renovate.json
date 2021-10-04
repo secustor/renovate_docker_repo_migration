@@ -13,6 +13,7 @@
          "image:\\s+(?<depName>(?<shouldMigrate>docker\\.io\\/library\\/nginx)?[^\\s:]*):(?<currentValue>[^\\s]+)"
       ],
       "depNameTemplate":"{{#if shouldMigrate}}docker.io/nginxinc/nginx-unprivileged{{else}}{{{depName}}}{{/if}}",
+      "autoReplaceStringTemplate": "image: {{{depName}}}:{{{newValue}}}"
       "datasourceTemplate":"docker"
    }]
 }
