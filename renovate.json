@@ -7,7 +7,7 @@
    {
       "fileMatch":[
          "(^|/)values.yaml$",
-         "\/values_base.ya?ml$"
+         "(^|/)values_base.ya?ml$"
       ],
       "matchStrings":[
          "image:\\s+(?<depName>(?<shouldMigrate>docker\\.io\\/library\\/nginx)?[^\\s:]*):(?<currentValue>[^\\s]+)"
