@@ -1,0 +1,15 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base"
+  ],
+  regexManagers: {
+    "fileMatch": ['(^|/)values.yaml$', '/values_base.ya?ml$'],
+    "matchStrings": [
+      "image:\\s+(?<depName>(?<shouldMigrate>docker\\.io\\/library\\/nginx)?[^\\s:]*):(?<currentValue>[^\\s]+)"
+      ],
+    depNameTemplate: "{{#if shouldMigrate}}docker.io/nginxinc/nginx-unprivileged{{else}}{{{depName}}}{{/if}}",
+    datasourceTemplate: "docker"
+  },
+}
+
